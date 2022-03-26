@@ -35,7 +35,6 @@ public class Page {
     By viewList=By.linkText("View Your List");
     By secondS22=By.id("itemName_I3VV2SNPTTFJKL");
     By deleteButtonInList=By.xpath("(//*[@name='submit.deleteItem'])[1]");
-    By seachInboxShopingList=By.id("itemSearchTextInput");
     By shopingListİtems=By.xpath("//h2[@class='a-size-base']");
 
     public void amazonLogo() {
@@ -112,14 +111,17 @@ public class Page {
     }
     public void deleteFromList(){
         Driver.getDriver().findElement(deleteButtonInList).click();
+
     }
 
     public  void shopingListİtems(){
         List<WebElement> items=Driver.getDriver().findElements(shopingListİtems);
+
         for (int i=0;i<items.size();i++){
             System.out.println(items.get(i).getText());
-            Assert.assertTrue(items.contains("S22"));
-        }
+
+        }  System.out.println(items.size());
+        Assert.assertFalse(items.contains("S22"));
     }
 
 

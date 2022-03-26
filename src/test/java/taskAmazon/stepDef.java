@@ -78,9 +78,10 @@ Page page=new Page();
 
 
     @Then("delete product from list and control this")
-    public void deleteProductFromListAndControlThis() {
+    public void deleteProductFromListAndControlThis() throws InterruptedException {
         page.deleteFromList();
-
+        Thread.sleep(3000);
+        page.shopingListİtems();
 
     }
 }
