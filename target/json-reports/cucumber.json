@@ -1,0 +1,38 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-03-24T14:20:21.052Z",
+        "line": 4,
+        "name": "Visit a page and check the page title",
+        "description": "",
+        "id": "visit-a-page-and-click-on-a-link;visit-a-page-and-check-the-page-title",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "go to amazon",
+            "match": {},
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      }
+    ],
+    "name": "Visit a page and click on a link",
+    "description": "",
+    "id": "visit-a-page-and-click-on-a-link",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/taskAmazon.feature",
+    "tags": []
+  }
+]
