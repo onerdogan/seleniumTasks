@@ -63,10 +63,9 @@ Page page=new Page();
         bw.close();
     }
 
-    @Then("add to list and create shoping list")
-    public void addToListAndCreateShopingList() throws InterruptedException {
-
-           page.S22click();
+       @Then("add to shoping list and validate")
+    public void addToShopingListAndValidate() throws InterruptedException {
+        page.S22click();
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,500)", "Add to List");
         //WebDriverWait w = new WebDriverWait(Driver.getDriver(),7);
