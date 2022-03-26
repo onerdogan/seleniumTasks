@@ -73,7 +73,15 @@ Page page=new Page();
         Thread.sleep(3000);
         page.addToList();
         page.viewList();
-        page.validateListS22();
+        page.validateS22InList();
+    }
+
+
+    @Then("delete product from list and control this")
+    public void deleteProductFromListAndControlThis() {
+        page.deleteFromList();
+
+
     }
 }
 

@@ -34,7 +34,9 @@ public class Page {
     By addToList=By.id("add-to-wishlist-button-submit");
     By viewList=By.linkText("View Your List");
     By secondS22=By.id("itemName_I3VV2SNPTTFJKL");
-
+    By deleteButtonInList=By.xpath("(//*[@name='submit.deleteItem'])[1]");
+    By seachInboxShopingList=By.id("itemSearchTextInput");
+    By shopingListİtems=By.xpath("//h2[@class='a-size-base']");
 
     public void amazonLogo() {
         Driver.getDriver().findElement(amazonLogo).isDisplayed();
@@ -69,18 +71,18 @@ public class Page {
     }
 
     public void S22() {
-
+      String firstS22=Driver.getDriver().findElement(S22).getText();
         Driver.getDriver().findElement(S22).getText().contains("22");
     }
     public  void secondS22(){
         String viewListS22=Driver.getDriver().findElement(secondS22).getText();
 
     }
-    public void validateListS22(){
-        String firstS22=Driver.getDriver().findElement(S22).getText();
-        String viewListS22=Driver.getDriver().findElement(secondS22).getText();
+    public void validateS22InList(){
 
-        Assert.assertEquals(firstS22,viewListS22);
+        String viewListS22=Driver.getDriver().findElement(By.partialLinkText("S22")).getText();
+
+        Assert.assertTrue(viewListS22.contains("S22"));
     }
 
     public void searchResults() {
@@ -108,6 +110,20 @@ public class Page {
     public  void viewList(){
         Driver.getDriver().findElement(viewList).click();
     }
+    public void deleteFromList(){
+        Driver.getDriver().findElement(deleteButtonInList).click();
+    }
+
+    public  void shopingListİtems(){
+        List<WebElement> items=Driver.getDriver().findElements(shopingListİtems);
+        for (int i=0;i<items.size();i++){
+            System.out.println(items.get(i).getText());
+            Assert.assertTrue(items.contains("S22"));
+        }
+    }
+
+
+
 
             //  public void verify_yourAcnt(){
             //      String Account = driver.findElement(your_acct).getText();

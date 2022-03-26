@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-03-24T14:20:21.052Z",
+        "start_timestamp": "2022-03-26T19:51:07.271Z",
         "line": 4,
         "name": "Visit a page and check the page title",
         "description": "",
@@ -16,9 +16,54 @@
               "status": "undefined"
             },
             "line": 5,
-            "name": "go to amazon",
+            "name": "go to amazon and validate",
             "match": {},
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "sign in",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "search \"samsung\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "select S22 and add price textfile",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "add to shoping list and validate",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "delete product from list and control this",
+            "match": {},
+            "keyword": "Then "
           }
         ],
         "tags": [

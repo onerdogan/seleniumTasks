@@ -12,13 +12,12 @@ import org.junit.runner.RunWith;
                     "json:target/json-reports/cucumber.json",
                     "junit:target/xml-report/cucumber.xml"},
             features = "src/test/resources/taskAmazon.feature",
-            glue = "src/test/java/taskAmazon/stepDef",
-            tags = "",
+            glue = "taskAmazon/stepDef",
+            tags = "@test",
 
             dryRun=false
-            //dryrun=true dedigimizde testi calistirmadan bize eksik adimi verir
-            //dryrun=false dersek testi calistirir, eksik bir adimla calisirsa test fail olur , bize eksik adimi raporlar
-    )
+
+               )
 
 
 

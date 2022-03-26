@@ -7,3 +7,4 @@ Feature: Visit a page and click on a link
     Then search "samsung"
     Then select S22 and add price textfile
     Then add to shoping list and validate
+    Then delete product from list and control this
