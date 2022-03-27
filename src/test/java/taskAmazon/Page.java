@@ -9,7 +9,6 @@ import utils.Driver;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.time.Duration;
 import java.util.List;
 
 public class Page {
@@ -20,7 +19,6 @@ public class Page {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    //By sign_in_tab = By.xpath("//span[@class='ssrcss-qgttmg-AccountText eki2hvo4']");
     By amazonLogo = By.id("nav-logo-sprites");
     By signIntext = By.id("nav-link-accountList-nav-line-1");
     By mailInbox = By.id("ap_email");
@@ -33,9 +31,9 @@ public class Page {
     By pricesWhole = By.xpath("//span[@class='a-price-whole']");
     By addToList=By.id("add-to-wishlist-button-submit");
     By viewList=By.linkText("View Your List");
-    By secondS22=By.id("itemName_I3VV2SNPTTFJKL");
+    By S22ShopingList=By.xpath("(//h2[@class='a-size-base'])[1]");
     By deleteButtonInList=By.xpath("(//*[@name='submit.deleteItem'])[1]");
-    By shopingListİtems=By.xpath("//h2[@class='a-size-base']");
+    By shopingListItems=By.xpath("//h2[@class='a-size-base']");
 
     public void amazonLogo() {
         Driver.getDriver().findElement(amazonLogo).isDisplayed();
@@ -73,10 +71,7 @@ public class Page {
       String firstS22=Driver.getDriver().findElement(S22).getText();
         Driver.getDriver().findElement(S22).getText().contains("22");
     }
-    public  void secondS22(){
-        String viewListS22=Driver.getDriver().findElement(secondS22).getText();
 
-    }
     public void validateS22InList(){
 
         String viewListS22=Driver.getDriver().findElement(By.partialLinkText("S22")).getText();
@@ -114,8 +109,8 @@ public class Page {
 
     }
 
-    public  void shopingListİtems(){
-        List<WebElement> items=Driver.getDriver().findElements(shopingListİtems);
+    public  void shopingListItems(){
+        List<WebElement> items=Driver.getDriver().findElements(shopingListItems);
 
         for (int i=0;i<items.size();i++){
             System.out.println(items.get(i).getText());
@@ -124,11 +119,5 @@ public class Page {
         Assert.assertFalse(items.contains("S22"));
     }
 
-
-
-
-            //  public void verify_yourAcnt(){
-            //      String Account = driver.findElement(your_acct).getText();
-            //      Assert.assertEquals( "Your account", Account )
 
     }

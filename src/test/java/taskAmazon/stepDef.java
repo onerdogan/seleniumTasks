@@ -45,8 +45,8 @@ Page page=new Page();
 
     }
 
-    @Then("select S{int} and add price textfile")
-    public void selectSAndAddPriceTextfile(int model) throws IOException {
+    @Then("select S{int} and add prices textfile")
+    public void selectSAndAddPricesTextfile(int model) throws IOException {
         page.S22();
         page.searchResults();
         page.pricesWhole();
@@ -58,13 +58,12 @@ Page page=new Page();
         for (int i = 0; i < prices.size(); i++) {
             bw.write(prices.get(i).getText()+"$\n");
         }
-       // bw.newLine();
-        //bw.write("www.softwareteastingblog.in");
+
         bw.close();
     }
 
-       @Then("add to shoping list and validate")
-    public void addToShopingListAndValidate() throws InterruptedException {
+       @Then("add product to shoping list and validate")
+    public void addToProductShopingListAndValidate() throws InterruptedException {
         page.S22click();
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,500)", "Add to List");
@@ -81,7 +80,7 @@ Page page=new Page();
     public void deleteProductFromListAndControlThis() throws InterruptedException {
         page.deleteFromList();
         Thread.sleep(3000);
-        page.shopingListİtems();
+        page.shopingListItems();
 
     }
 }
